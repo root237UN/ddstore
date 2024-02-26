@@ -57,11 +57,11 @@ export default function Fournisseurs() {
 		onSaveForm(values);
 	}
 
-	const q = query(collection(db, 'fournisseurs'))
-
 
 	// Fecth dats from db
 	useEffect(() => {
+		const q = query(collection(db, 'fournisseurs'))
+
 		const fecthData = onSnapshot(q, (querySnapshot) => {
 			let fournisseurListe = []
 
